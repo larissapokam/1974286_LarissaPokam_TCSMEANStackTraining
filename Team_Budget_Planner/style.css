@@ -1,0 +1,16 @@
+div{
+    padding: 30px;
+    margin-left: 80px;
+    border: rgb(221, 32, 221) solid 2px;
+    width: 50%;;
+    height: 300px;
+}
+
+h2{
+    margin-left: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight:bolder;
+    font-style: oblique;
+    font-size: xx-large;
+    color: rgb(221, 32, 221);
+}
