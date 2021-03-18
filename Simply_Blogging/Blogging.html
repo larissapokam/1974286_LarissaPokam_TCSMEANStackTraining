@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging</title>
+    <script src="Blogging.js"></script>
+    <script src=  "https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <style>
+        .box{
+            border: solid 2px rgb(221, 32, 221);
+            margin-left: 110px;
+            padding-left: 30px;
+            width: 80%;
+            height: 600px;
+        }
+        #title1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight:bolder;
+            font-style: oblique;
+            font-size: 50px;
+            text-decoration: underline;
+            color: rgb(221, 32, 221);
+        }
+        #addB{
+            background-color: rgb(221, 32, 221);
+        }
+        #divCol0{
+            border: solid 2px rgb(221, 32, 221);
+            width: 23%;
+            height: 150px;
+            float: left;
+            margin-left: 20px;
+            border-radius:10%;
+            padding-left: 20px;
+        }
+        #divCol1{
+            border: solid 2px rgb(221, 32, 221);
+            width: 23%;
+            height: 150px;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius:10%;
+            padding-left: 20px;
+        }
+        #divCol2{
+            border: solid 2px rgb(221, 32, 221);
+            width: 23%;
+            height: 150px;
+            float: left;  
+            border-radius:10%;
+            padding-left: 20px;
+        }
+       
+        #divCol3{
+            border: solid 2px rgb(221, 32, 221);
+            width: 23%;
+            height: 150px;
+            float: left;
+            margin-left: 10px;
+            padding-left: 20px;
+            border-radius:10%;
+        }
+       
+    </style>
+</head>
+<body onload="retrieveInfos()">
+
+    <div class="box">
+        <br/> <h2 id="title1" >Simply Blogging</h2>
+
+            <ul class="nav justify-content-end"> 
+                <li class="nav-item"> 
+                    <u><a href="#" class="nav-link">Add Blog</a></u>
+                </li>
+                <li class="nav-item"> 
+                   <u> <a href="#" class="nav-link">Home</a> </u>
+                </li>
+                <li class="nav-item"> 
+                    <u> <a href="#" class="nav-link">AboutUs</a></u>
+                </li>
+                <li class="nav-item"> 
+                    <u> <a href="#" class="nav-link">Contacts</a></u>
+                </li>
+            </ul>
+
+        
+            <h3 class="col-3">Adding a New Blog</h3>
+    
+        <div class="container-fluid">
+            <form action="" class="form-group">
+
+                <div class="row">
+                    <label class="col-1">Title:</label>
+                    <input type="text" class="col-2" id="title" />
+                </div> <br/>
+                <div class="row">
+                    <label class="col-1">Article:</label>
+                    <textarea type="text" class="col-2" id="article"></textarea> 
+                </div> <br/>
+                <div class="row">
+                    <label class="col-1">Add Image:</label>
+                    <input type="file" class="col-3" id="img" /> 
+                </div> <br/>
+                <div class="row">
+                    <input type="button" value="Add Blog" class="col-1" id="addB" onclick="AddBlog()"/>
+                </div>
+
+            </form>
+            
+        </div>
+
+        <hr/>
+
+            <div class="col" class="divRow" id="divCol0">
+                <img src="" id="imgInfo0"/>
+            </div>
+            <div class="col" class="divRow" id="divCol1">
+                <img src="" id="imgInfo1"/>
+            </div>
+            <div class="col" class="divRow" id="divCol2">
+                <img src="" id="imgInfo2"/>
+            </div>
+            <div class="col" class="divRow" id="divCol3">
+                <img src="" id="imgInfo3"/>
+            </div>
+        
+    </div>
+    
+</body>
+</html>
