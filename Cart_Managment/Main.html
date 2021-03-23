@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LalaShop</title>
+    <script src="Managment.js"></script>
+    <script src=  "https://code.jquery.com/jquery-3.3.1.min.js"> </script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+    <style>
+        .box{
+            border: solid 2px rgb(221, 32, 221);
+            margin-left: 110px;
+            padding-left: 30px;
+            width: 80%;
+            height: 600px;
+        }
+        #title1{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight:bolder;
+            font-style: oblique;
+            font-size: 50px;
+            text-decoration: underline;
+            color: rgb(221, 32, 221);
+        }
+        #addB{
+            background-color: rgb(170, 40, 200);
+        }
+        #nberItem{
+            font-weight: bold;
+            text-align: center;
+        }
+        #header{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .col-2{text-align: center;}
+        .nav-item{
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: underline;
+            color: rgb(221, 32, 221);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <br/> <h2 id="title1" >Lala Shop</h2>
+
+            <ul class="nav justify-content-end"> 
+                <li class="nav-item"> 
+                    <u><a href="#" class="nav-link">Home</a></u>
+                </li>
+                <li class="nav-item"> 
+                    <u> <a href="Cart.html" class="nav-link" onclick="retrieveInfos()">Checkout </a></u>
+                </li>
+                <li class="nav-item"> 
+                   <u> <a href="#" class="nav-link">Profile </a> </u>
+                </li>
+                <li class="nav-item"> 
+                    <u> <a href="#" class="nav-link">Setting</a></u>
+                </li>
+                
+               
+            </ul>
+
+            <div id="nberItem"> </div></br>
+            <div class="container-fluid" >
+                <div class="row" id="header"> 
+                    <label class="col-1">Items</label>
+                    <label class="col-2">Unit Price</label>
+                    <label class="col-1">Quantity</label>
+                    
+                </div> <br/>
+                    <div class="row">
+                        <label class="col-1" id="item1">Bread:</label>
+                        <label class="col-2" id="price1">$2.99:</label>
+                        <input type="number" class="col-1" id="quantity1" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Bread','2.99','quantity1')"/>
+                    
+                    </div> <br/>
+                    <div class="row">
+                        <label class="col-1">Dognut:</label>
+                        <label class="col-2">$0.37:</label>
+                        <input type="number" class="col-1" id="quantity2" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Dognut','0.37','quantity2')"/>
+                    
+                    </div> <br/>
+                    <div class="row">
+                        <label class="col-1">Milk:</label>
+                        <label class="col-2">$3.99:</label>
+                        <input type="number" class="col-1" id="quantity3" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Milk','3.99','quantity3')"/>
+                    
+                    </div> <br/>
+                    <div class="row">
+                        <label class="col-1">Oranges:</label>
+                        <label class="col-2">$0.67:</label>
+                        <input type="number" class="col-1" id="quantity4" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Oranges', '0.67','quantity4')"/>
+                    
+                    </div><br/>
+                    <div class="row">
+                        <label class="col-1">Hinecken:</label>
+                        <label class="col-2">$8.99:</label>
+                        <input type="number" class="col-1" id="quantity5" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Hinecken', '8.99','quantity5')"/>
+                    
+                    </div> <br/>
+                    <div class="row">
+                        <label class="col-1">Whole Chicken:</label>
+                        <label class="col-2">$9.98:</label>
+                        <input type="number" class="col-1" id="quantity6" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Whole Chicken','9.98','quantity6')"/>
+                    
+                    </div> <br/>
+                
+                    <div class="row">
+                        <label class="col-1">Coke:</label>
+                        <label class="col-2">$1.99:</label>
+                        <input type="number" class="col-1" id="quantity7" />
+                        <input type="button" value="Add" class="col-1" id="addB" onclick="addItem('Coke','1.99','quantity7')"/>
+                    
+                    </div> <br/>
+            </div>
+    
+            </div>
+        
+        
+    </div>
+    
+    
+</body>
+</html>
