@@ -1,0 +1,18 @@
+
+<div class="container" class="col-5">
+    <h2 id="title">Login Here</h2> <br/>
+    <form #userRef="ngForm" (ngSubmit)="checkUser(userRef.value)">
+        <label class="col-2" >Username: </label>
+        <input type="text" class="col-3" name="user" ngModel/> <br/><br/>
+        <label class="col-2">Password:</label>
+        <input type="password" class="col-3" name="pass" ngModel/> <br/><br/>
+        <input type="submit" class="col-5" id="submitButton" value="Login"/> <br/>
+        <input type="reset" value="reset"/>
+    </form> <br/>
+   <p id="msg">{{msg}} </p> 
+
+    <br/>
+    <label>New User? Click the button to Register: </label>
+    <input type="button" id="submitButton" value="Register" (click)="signup()"> <br/> <br/>
+
+</div>

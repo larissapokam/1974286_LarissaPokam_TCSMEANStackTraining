@@ -1,0 +1,29 @@
+<div id="box" class="container" class="col-6">
+    <h2 id="title">My Amazing Portfolio...</h2>
+    <br/>
+    <div   class="col-8" > Welcome {{username}}! Please logout when you done
+        <input type="button" id="submitButton" value="Logout" (click)="logout()">
+
+    </div> 
+    <br/>
+    <form #userRef="ngForm" (ngSubmit)="saveContact(userRef.value)">
+        <label class="col-3">Contact Name:</label>
+        <input type="text" class="col-3" name="user" ngModel/> <br/><br/>
+        <label class="col-3">Contact Phone:</label>
+        <input type="text" class="col-3" name="phone" ngModel/> <br/><br/>
+        <input type="submit" class="col-6" id="submitButton" value="Add"/><br/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    <table class="table table-sm">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+        </tr>
+        <tr *ngFor="let user of contacts">
+            <td>{{user.name}}</td>
+            <td>{{user.pass}}</td>
+        </tr>
+    </table>
+
+</div>
