@@ -1,0 +1,49 @@
+#but2 {
+    margin-left:5%;
+ }
+ #but1 {
+    margin-left:35%;
+ }
+ #but4 {
+    margin-left:15%;
+ }
+ #bute3 {
+    margin-left:35%;
+ }
+
+ #head{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+ }
+ #box{
+    margin-left: 20%;
+    margin-right: 20%;
+    border: solid 1pc purple;
+    padding-left: 20%;
+    padding-right: 20%;
+    
+}
+#box3{
+   
+    margin-right: 10%;
+    border: solid 1pc purple;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+#title{
+    padding-left: 40px;
+    text-decoration: underline;
+    color: #df1cc5;
+    font-weight: bolder;
+    text-align: center;
+}
+#title2{
+    padding-left: 40px;
+    
+    color: #8b3880;
+    font-weight: bolder;
+    text-align: center;
+}

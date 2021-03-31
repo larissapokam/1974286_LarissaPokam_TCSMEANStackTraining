@@ -1,0 +1,60 @@
+<div id="head">
+     <h1 id="title"> Welcome to the Task Tracker Dashbord</h1> <br/>
+    <h3 id="title2"> What do you want to do? Select an option:</h3><br/>
+    <button mat-stroked-button color="primary" 
+    style="background-color:darkorange;" type="button" id="but1" (click)="callAdd()">Add tasks</button>
+    <button mat-stroked-button color="primary" 
+    style="background-color:darkorange;" type="button" id="but2" (click)="getTaskInfos()">See to-do list</button>
+    
+    <br/>
+
+</div>
+<hr/>
+<div *ngIf="flag1" id="box">
+    <u><h2>Add a task</h2></u>
+    <form #taskRef="ngForm" (ngSubmit)="storeTaskInfos(taskRef.value)">
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input matInput type="text" name="id" ngModel/>
+        </mat-form-field> <br/>
+        &nbsp;
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput type="text" name="name" ngModel/>
+        </mat-form-field>
+        &nbsp;
+        <br/>
+        <mat-form-field>
+            <mat-label>Task</mat-label>
+            <textarea matInput type="text" name="task" ngModel></textarea>
+        </mat-form-field> <br/>
+        &nbsp;
+        <mat-form-field>
+            <mat-label>Deadline</mat-label>
+            <input matInput type="date" name="date" ngModel/>
+        </mat-form-field> <br/>
+      
+        <button mat-fab type="submit" color="warn"  id="but3">Save</button>
+        <button mat-fab type="reset" color="accent" id="but4">Reset</button>
+    </form>
+    <br/>
+</div>
+
+<div *ngIf="flag2" class="container" id="box3">
+    
+   <u> <h2 id="title2">To do list</h2></u>
+    <table class="table table-bordered">
+        <tr >
+            <th scope="col">Task Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Task</th>
+            <th scope="col">Deadline</th>
+        </tr>
+        <tr *ngFor="let task of tasksList">
+            <td>{{task.id}}</td>
+            <td>{{task.name}}</td>
+            <td>{{task.task}}</td>
+            <td>{{task.date}}</td>
+        </tr>
+    </table>
+</div>
