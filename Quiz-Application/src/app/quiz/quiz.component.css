@@ -1,0 +1,52 @@
+
+  #box{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
+    border: solid 2pc purple;
+    padding-left: 10%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+#submitBut {
+    background-color: #df1cc5;
+    color: white;
+    border: solid 1;
+    cursor: pointer;
+  
+  }
+
+  #submitBut:hover {
+    opacity: 0.7;
+  }
+  
+
+#submitButton {
+  background-color: #df1cc5;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  border: solid 1;
+  cursor: pointer;
+  margin-left: 30%;
+}
+
+#submitButton:hover {
+  opacity: 0.7;
+}
+
+#logoutBut{
+    float: left;
+}
+
+p{
+  font-size: large;
+  font-weight: bold;
+}
+
+#title{
+    padding-left: 70px;
+    text-decoration: underline;
+    color: #df1cc5;
+}
