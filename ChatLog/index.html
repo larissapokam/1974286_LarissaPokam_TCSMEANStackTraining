@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getDetails</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script type="text/JavaScript">
+        var socket = io();
+
+        function getInfos() {
+            var name = document.getElementById("name").value;
+            var msg = document.getElementById("msg").value;
+           // document.getElementById("sms").innerHTML = name;
+           // var outp = "{name" + name + "Your message: " + msg + "\n"; 
+            var output = '{"name":"'+ name + '", "message":"' + msg +'"}';
+            socket.emit("chat", output);
+        }
+    </script>
+    
+</head>
+<body>
+    <br>
+   <form>
+        <label>Name: </label>
+        <input type="text" id="name" /> <br> <br>
+        <label>Message: </label>
+        <textarea type="text" id="msg"></textarea> <br> <br>
+        <input type="submit" value="Send" onclick="getInfos()"/> <br> <br> 
+        <input type="reset" value="reset"/>
+
+   </form>
+   
+</body>
+</html>
